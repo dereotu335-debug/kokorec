@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Atam Kokoreç — Menü</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#000000;
+  --surface:#0d0d0d;
+  --line:#2a2a2a;
+  --text:#f2f2f2;
+  --muted:#8a8a8a;
+  --orange:#ff6a1a;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+
+header.hero{padding:72px 0 48px;border-bottom:1px solid var(--line)}
+.logo{font-family:'Archivo Black',Impact,sans-serif;font-size:clamp(3.2rem,16vw,6.5rem);line-height:.9;margin:0;letter-spacing:-.02em}
+.logo span{display:block;color:var(--orange)}
+.hero p{margin:20px 0 0;color:var(--muted);max-width:32ch}
+
+nav{position:sticky;top:0;z-index:5;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:8px;padding-top:12px;padding-bottom:12px;overflow-x:auto}
+nav a{color:var(--muted);text-decoration:none;font-size:.9rem;font-weight:500;padding:7px 14px;border:1px solid var(--line);border-radius:999px;white-space:nowrap;transition:.2s}
+nav a:hover,nav a:focus-visible{color:var(--bg);background:var(--orange);border-color:var(--orange);outline:none}
+
+section{padding:48px 0 8px}
+h2{font-family:'Archivo Black',Impact,sans-serif;font-weight:400;font-size:1.9rem;margin:0 0 6px;letter-spacing:-.01em}
+.note{color:var(--muted);font-size:.9rem;margin:0 0 20px}
+
+.item{display:flex;align-items:baseline;gap:12px;padding:18px 0;border-bottom:1px solid var(--line)}
+.item:first-of-type{border-top:1px solid var(--line)}
+.name{font-weight:600;font-size:1.05rem}
+.desc{display:block;color:var(--muted);font-size:.88rem;font-weight:400;margin-top:2px}
+.dots{flex:1;border-bottom:1px dotted #3a3a3a;transform:translateY(-4px);min-width:16px}
+.price{min-width:64px;text-align:right;color:var(--orange);font-weight:600;font-variant-numeric:tabular-nums}
+
+.group{margin-top:28px}
+.group h3{margin:0 0 4px;font-size:1.05rem;font-weight:600;color:var(--orange)}
+
+footer{margin-top:64px;padding:32px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+footer strong{color:var(--text)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1 class="logo">Atam<span>Kokoreç</span></h1>
+    <p>Közde pişen kokoreç, Adana ve Urfa kebap.</p>
+  </div>
+</header>
+
+<nav aria-label="Menü bölümleri">
+  <div class="wrap">
+    <a href="#kokorec">Kokoreç</a>
+    <a href="#kebap">Kebap</a>
+    <a href="#icecek">İçecekler</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <section id="kokorec">
+    <h2>Kokoreç</h2>
+    <div class="item"><div class="name">Çeyrek</div><div class="dots"></div><div class="price">170 ₺</div></div>
+    <div class="item"><div class="name">Yarım</div><div class="dots"></div><div class="price">240 ₺</div></div>
+    <div class="item"><div class="name">Üç parça</div><div class="dots"></div><div class="price">300 ₺</div></div>
+    <div class="item"><div class="name">Porsiyon<span class="desc">Soğan, domates, biber ve 2 meze ile</span></div><div class="dots"></div><div class="price">500 ₺</div></div>
+  </section>
+
+  <section id="kebap">
+    <h2>Kebap</h2>
+    <div class="group">
+      <h3>Adana kebap</h3>
+      <div class="item"><div class="name">Dürüm</div><div class="dots"></div><div class="price">250 ₺</div></div>
+      <div class="item"><div class="name">Porsiyon<span class="desc">Közlenmiş domates, biber, soğan salatası ve lavaş ile</span></div><div class="dots"></div><div class="price">550 ₺</div></div>
+    </div>
+    <div class="group">
+      <h3>Urfa kebap</h3>
+      <div class="item"><div class="name">Dürüm</div><div class="dots"></div><div class="price">250 ₺</div></div>
+      <div class="item"><div class="name">Porsiyon<span class="desc">Közlenmiş domates, biber, soğan salatası ve lavaş ile</span></div><div class="dots"></div><div class="price">550 ₺</div></div>
+    </div>
+  </section>
+
+  <section id="icecek">
+    <h2>İçecekler</h2>
+    <div class="item"><div class="name">Ayran<span class="desc">Küçük</span></div><div class="dots"></div><div class="price">30 ₺</div></div>
+    <div class="item"><div class="name">Ayran<span class="desc">Büyük</span></div><div class="dots"></div><div class="price">40 ₺</div></div>
+    <div class="item"><div class="name">Şalgam<span class="desc">Acılı</span></div><div class="dots"></div><div class="price">50 ₺</div></div>
+    <div class="item"><div class="name">Şalgam<span class="desc">Acısız</span></div><div class="dots"></div><div class="price">50 ₺</div></div>
+    <div class="item"><div class="name">Cola, Fanta<span class="desc">Tüm çeşitler</span></div><div class="dots"></div><div class="price">70 ₺</div></div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap"><strong>Atam Kokoreç</strong></div>
+</footer>
+
+</body>
+</html>
